@@ -1,0 +1,79 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.header {
+    display: flex;
+}
+
+.side-nav {
+    background-color: #333;
+    color: #fff;
+    width: 250px;
+    padding: 20px;
+    height: 100vh; /* Make the sidebar take full height */
+    box-sizing: border-box; /* Include padding and border in the total width and height */
+    overflow-y: auto; /* Add a scrollbar if the content is too tall */
+}
+
+h2 {
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+/* Add some padding and border to the submenus */
+ul ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #fff;
+}
+
+/* Add some spacing between the icons and text */
+img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+/* Style the signout link */
+ul li:last-child a {
+    border-top: 2px solid #fff;
+    padding-top: 10px;
+    display: block;
+}
+
+/* Highlight the current page */
+a.active {
+    background-color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+    .side-nav {
+        width: 100%;
+    }
+}
